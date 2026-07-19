@@ -51,7 +51,7 @@
 
 /* Fast gallery marquee variant */
 .marquee-fast .marquee-content {
-  animation-duration: 100s;
+  animation-duration: 40s;
 }
 
 
