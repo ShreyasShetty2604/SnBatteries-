@@ -188,7 +188,53 @@
     }
 
     .service-card {
-      padding: var(--space-8) var(--space-6);
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .service-card-img {
+      height: 160px;
+      width: 100%;
+      position: relative;
+      background: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-primary) 100%);
+      overflow: hidden;
+    }
+    .service-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--duration-normal) var(--ease-out);
+    }
+    .service-card:hover .service-card-img img {
+      transform: scale(1.06);
+    }
+    .service-card-body {
+      padding: var(--space-6);
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card-icon-floating {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(4px);
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .service-card-icon-floating svg {
+      width: 18px;
+      height: 18px;
     }
 
     .service-icon-wrapper {
@@ -374,29 +420,19 @@
         
         <div class="hero-graphic float-anim">
           <div class="glow-circle"></div>
-          <div class="graphic-card">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:var(--space-3); margin-bottom:var(--space-4);">
-              <span style="font-weight:600; color:var(--color-accent); font-size:var(--text-body-sm);">SYSTEM STATUS</span>
-              <span class="badge badge-success" style="font-size:10px;">OPTIMAL</span>
+          <div class="hero-image-container" style="position: relative; z-index: 2; width: 100%; max-width: 480px; aspect-ratio: 4/3; border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-2xl); border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px);">
+            <img src="images/services/replacement.png" alt="Premium Battery Sales & Service" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9) contrast(1.05);">
+            <div class="hero-floating-tag tag-1" style="position: absolute; top: 20px; left: 20px; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-full); padding: 8px 16px; display: flex; align-items: center; gap: 8px; color: #FFFFFF; font-size: 13px; font-weight: 600; box-shadow: var(--shadow-md);">
+              <i data-lucide="zap" style="color: var(--color-energy); width: 16px; height: 16px;"></i>
+              <span>100% Original Stock</span>
             </div>
-            
-            <div style="flex-grow:1; display:flex; flex-direction:column; justify-content:center; gap:var(--space-4);">
-              <div style="display:flex; align-items:center; gap:var(--space-3);">
-                <i data-lucide="zap" style="color:var(--color-energy); width:28px; height:28px;"></i>
-                <div>
-                  <p style="font-weight:600; margin:0; color:#FFFFFF; font-size:15px;">Automotive Batteries</p>
-                  <p style="color:var(--color-text-muted); margin:0; font-size:12px;">Immediate replacement & support</p>
-                </div>
-              </div>
-              
-              <div style="display:flex; align-items:center; gap:var(--space-3);">
-                <i data-lucide="home" style="color:var(--color-accent); width:28px; height:28px;"></i>
-                <div>
-                  <p style="font-weight:600; margin:0; color:#FFFFFF; font-size:15px;">Home UPS Backups</p>
-                  <p style="color:var(--color-text-muted); margin:0; font-size:12px;">Continuous residential supply</p>
-                </div>
-              </div>
+            <div class="hero-floating-tag tag-2" style="position: absolute; bottom: 20px; right: 20px; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-full); padding: 8px 16px; display: flex; align-items: center; gap: 8px; color: #FFFFFF; font-size: 13px; font-weight: 600; box-shadow: var(--shadow-md);">
+              <i data-lucide="truck" style="color: var(--color-accent); width: 16px; height: 16px;"></i>
+              <span>Doorstep Install in 1 Hr</span>
             </div>
+          </div>
+        </div>
+      </div>
             
             <div style="border-top:1px solid rgba(255,255,255,0.08); padding-top:var(--space-3); margin-top:var(--space-4); display:flex; justify-content:space-between; align-items:center;">
               <span style="font-size:12px; color:var(--color-text-muted);">100% Genuine Brands</span>
@@ -441,67 +477,107 @@
         <div class="d-grid services-grid">
           <!-- Card 1 -->
           <div class="card service-card reveal delay-1">
-            <div class="service-icon-wrapper">
-              <i data-lucide="car"></i>
+            <div class="service-card-img">
+              <img src="images/services/four-wheeler.png" alt="Car Batteries">
+              <div class="service-card-icon-floating">
+                <i data-lucide="car"></i>
+              </div>
             </div>
-            <h3>Car Batteries</h3>
-            <p>Reliable automotive power for all vehicle makes with immediate roadside setup support.</p>
+            <div class="service-card-body">
+              <h3>Car Batteries</h3>
+              <p>Reliable automotive power for all vehicle makes with immediate roadside setup support.</p>
+            </div>
           </div>
           <!-- Card 2 -->
           <div class="card service-card reveal delay-2">
-            <div class="service-icon-wrapper">
-              <i data-lucide="bike"></i>
+            <div class="service-card-img">
+              <img src="images/batteries/battery.png" alt="Bike Batteries">
+              <div class="service-card-icon-floating">
+                <i data-lucide="bike"></i>
+              </div>
             </div>
-            <h3>Bike Batteries</h3>
-            <p>Long-lasting, zero-maintenance battery setups optimized for two-wheeler rides.</p>
+            <div class="service-card-body">
+              <h3>Bike Batteries</h3>
+              <p>Long-lasting, zero-maintenance battery setups optimized for two-wheeler rides.</p>
+            </div>
           </div>
           <!-- Card 3 -->
           <div class="card service-card reveal delay-3">
-            <div class="service-icon-wrapper">
-              <i data-lucide="home"></i>
+            <div class="service-card-img">
+              <img src="images/batteries/amaron_ups.png" alt="Inverter Batteries">
+              <div class="service-card-icon-floating">
+                <i data-lucide="home"></i>
+              </div>
             </div>
-            <h3>Inverter Batteries</h3>
-            <p>Keep your home running. Reliable power backup supply solutions for home appliances.</p>
+            <div class="service-card-body">
+              <h3>Inverter Batteries</h3>
+              <p>Keep your home running. Reliable power backup supply solutions for home appliances.</p>
+            </div>
           </div>
           <!-- Card 4 -->
           <div class="card service-card reveal delay-4">
-            <div class="service-icon-wrapper">
-              <i data-lucide="building"></i>
+            <div class="service-card-img">
+              <img src="images/batteries/UPS.png" alt="UPS Solutions">
+              <div class="service-card-icon-floating">
+                <i data-lucide="building"></i>
+              </div>
             </div>
-            <h3>UPS Solutions</h3>
-            <p>Corporate backups and server protections to safeguard critical enterprise data.</p>
+            <div class="service-card-body">
+              <h3>UPS Solutions</h3>
+              <p>Corporate backups and server protections to safeguard critical enterprise data.</p>
+            </div>
           </div>
           <!-- Card 5 -->
           <div class="card service-card reveal delay-1">
-            <div class="service-icon-wrapper">
-              <i data-lucide="sun"></i>
+            <div class="service-card-img">
+              <img src="images/batteries/microtek.png" alt="Solar Batteries">
+              <div class="service-card-icon-floating">
+                <i data-lucide="sun"></i>
+              </div>
             </div>
-            <h3>Solar Batteries</h3>
-            <p>Harness sustainable energy with specialized high-capacity cycle storage battery banks.</p>
+            <div class="service-card-body">
+              <h3>Solar Batteries</h3>
+              <p>Harness sustainable energy with specialized high-capacity cycle storage battery banks.</p>
+            </div>
           </div>
           <!-- Card 6 -->
           <div class="card service-card reveal delay-2">
-            <div class="service-icon-wrapper">
-              <i data-lucide="cpu"></i>
+            <div class="service-card-img">
+              <img src="images/batteries/luminious.png" alt="Lithium Batteries">
+              <div class="service-card-icon-floating">
+                <i data-lucide="cpu"></i>
+              </div>
             </div>
-            <h3>Lithium Batteries</h3>
-            <p>Advanced modern storage systems featuring faster charges and extended battery life.</p>
+            <div class="service-card-body">
+              <h3>Lithium Batteries</h3>
+              <p>Advanced modern storage systems featuring faster charges and extended battery life.</p>
+            </div>
           </div>
           <!-- Card 7 -->
           <div class="card service-card reveal delay-3">
-            <div class="service-icon-wrapper">
-              <i data-lucide="truck"></i>
+            <div class="service-card-img">
+              <img src="images/services/replacement.png" alt="Doorstep Service">
+              <div class="service-card-icon-floating">
+                <i data-lucide="truck"></i>
+              </div>
             </div>
-            <h3>Doorstep Service</h3>
-            <p>Don't get stuck. Quick delivery, replacement, and testing support right at your place.</p>
+            <div class="service-card-body">
+              <h3>Doorstep Service</h3>
+              <p>Don't get stuck. Quick delivery, replacement, and testing support right at your place.</p>
+            </div>
           </div>
           <!-- Card 8 -->
           <div class="card service-card reveal delay-4">
-            <div class="service-icon-wrapper">
-              <i data-lucide="wrench"></i>
+            <div class="service-card-img">
+              <img src="images/services/jump_start.png" alt="Expert Setup">
+              <div class="service-card-icon-floating">
+                <i data-lucide="wrench"></i>
+              </div>
             </div>
-            <h3>Expert Setup</h3>
-            <p>Our technicians test current systems and set up replacement batteries professionally.</p>
+            <div class="service-card-body">
+              <h3>Expert Setup</h3>
+              <p>Our technicians test current systems and set up replacement batteries professionally.</p>
+            </div>
           </div>
         </div>
       </div>

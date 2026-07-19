@@ -92,6 +92,16 @@
       height: 100%;
     }
 
+    .branch-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform var(--duration-normal) var(--ease-out);
+    }
+    .branch-card:hover .branch-img-wrapper img {
+      transform: scale(1.08);
+    }
     .branch-img-wrapper {
       height: 220px;
       background: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-primary) 100%);
@@ -133,11 +143,31 @@
       overflow: hidden;
     }
 
-    .branch-card:hover .branch-img-wrapper {
+    .branch-card:hover .branch-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform var(--duration-normal) var(--ease-out);
+    }
+    .branch-card:hover .branch-img-wrapper img {
+      transform: scale(1.08);
+    }
+    .branch-img-wrapper {
       transform: scale(1.04);
       transition: transform var(--duration-normal) var(--ease-out);
     }
 
+    .branch-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform var(--duration-normal) var(--ease-out);
+    }
+    .branch-card:hover .branch-img-wrapper img {
+      transform: scale(1.08);
+    }
     .branch-img-wrapper {
       transition: transform var(--duration-normal) var(--ease-out);
     }
@@ -307,7 +337,7 @@
           <!-- Branch 1 -->
           <div class="card branch-card reveal delay-1">
             <div class="branch-img-wrapper">
-              <i data-lucide="map-pin"></i>
+              <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&q=80&w=600&h=400" alt="HSR Layout Bengaluru">
             </div>
             <div class="card-body">
               <h3>HSR Layout Branch</h3>
@@ -330,7 +360,7 @@
           <!-- Branch 2 -->
           <div class="card branch-card reveal delay-2">
             <div class="branch-img-wrapper">
-              <i data-lucide="map-pin"></i>
+              <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&q=80&w=600&h=400" alt="Indiranagar Bengaluru">
             </div>
             <div class="card-body">
               <h3>Indiranagar Branch</h3>
@@ -353,7 +383,7 @@
           <!-- Branch 3 -->
           <div class="card branch-card reveal delay-3">
             <div class="branch-img-wrapper">
-              <i data-lucide="map-pin"></i>
+              <img src="https://images.unsplash.com/photo-1579294800821-694d95e86143?auto=format&fit=crop&q=80&w=600&h=400" alt="Jayanagar Bengaluru">
             </div>
             <div class="card-body">
               <h3>Jayanagar Branch</h3>
@@ -376,7 +406,7 @@
           <!-- Branch 4 -->
           <div class="card branch-card reveal delay-1">
             <div class="branch-img-wrapper">
-              <i data-lucide="map-pin"></i>
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600&h=400" alt="Koramangala Bengaluru">
             </div>
             <div class="card-body">
               <h3>Koramangala Branch</h3>
@@ -399,7 +429,7 @@
           <!-- Branch 5 -->
           <div class="card branch-card reveal delay-2">
             <div class="branch-img-wrapper">
-              <i data-lucide="map-pin"></i>
+              <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&q=80&w=600&h=400" alt="Whitefield Bengaluru">
             </div>
             <div class="card-body">
               <h3>Whitefield Branch</h3>

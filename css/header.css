@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   height: 72px;
-  z-index: 1000;
+  z-index: 9999;
   display: flex;
   align-items: center;
   transition: background-color var(--duration-slow) var(--ease-out),
@@ -27,17 +27,22 @@
 /* Scrolled state applied via JS */
 .site-header.scrolled {
   height: 64px;
-  background-color: rgba(255, 255, 255, 0.90);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 768px) {
   .site-header.scrolled {
-    height: 56px;
-  }
+  height: 64px;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.08);
+}
 }
 
 .header-container {
