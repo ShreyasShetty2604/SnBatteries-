@@ -208,6 +208,13 @@
       object-fit: cover;
       transition: transform var(--duration-normal) var(--ease-out);
     }
+    .service-card:nth-child(-n+6) .service-card-img {
+      background-color: #FFFFFF;
+      padding: var(--space-4);
+    }
+    .service-card:nth-child(-n+6) .service-card-img img {
+      object-fit: contain;
+    }
     .service-card:hover .service-card-img img {
       transform: scale(1.06);
     }

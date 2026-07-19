@@ -153,7 +153,7 @@
       transform: translateZ(0);
     }
     .brand-slider-section .marquee-content {
-      animation-duration: 8s;
+      animation-duration: 16s;
       gap: 0; /* spacing handled by margin-right on each card */
     }
 
@@ -182,6 +182,13 @@
       object-fit: cover;
       display: block;
       transition: transform var(--duration-normal) var(--ease-out);
+    }
+    .solution-card:nth-child(-n+4) .solution-card-img {
+      background-color: #FFFFFF;
+      padding: var(--space-4);
+    }
+    .solution-card:nth-child(-n+4) .solution-card-img img {
+      object-fit: contain;
     }
     .solution-card:hover .solution-card-img img {
       transform: scale(1.05);
