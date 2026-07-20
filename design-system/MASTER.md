@@ -7,7 +7,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Product** | SN Batteries Sales & Service — Corporate Website |
+| **Product** | SN Batteries — Corporate Website |
 | **Category** | B2B Service / Local Enterprise |
 | **Pattern** | Enterprise Gateway + Social Proof Hybrid |
 | **Style** | Trust & Authority + Swiss Modernism 2.0 |

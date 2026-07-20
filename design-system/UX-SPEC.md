@@ -43,7 +43,7 @@
 
 ### Page Banner
 - **Background:** Dark navy with subtle grid pattern overlay
-- **Content:** H1 "SN Batteries Sales & Service" + breadcrumb + short description
+- **Content:** H1 "SN Batteries" + breadcrumb + short description
 - **Height:** 320px desktop, 240px mobile
 
 ### Who We Are
